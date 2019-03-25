@@ -2,6 +2,12 @@
 
 Check out this project online at [https://projekt-plutus.herokuapp.com/](https://projekt-plutus.herokuapp.com/)
 
+## Team Members
+
+- Sanobar Shamim
+- Saroja
+- Satyajit Ghana
+
 ## Installation
 
 ### Clone repository
