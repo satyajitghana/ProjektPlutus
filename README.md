@@ -1,17 +1,13 @@
-# CAS FEE PROJEKT 2 : SPA Shop Front End Implementation
+# SDF (Software Development Fundamentals) Implementation of the Designed Online Shopping System
 
-- Christian Zellweger (https://github.com/chzellweger)
-- André Abt (https://github.com/monobasic)
-
-Check out this project online at [http://shop.andre-abt.com](http://shop.andre-abt.com)
-Note: The pixelated product images are there because of image licensing reasons.
+Check out this project online at [https://projekt-plutus.herokuapp.com/](https://projekt-plutus.herokuapp.com/)
 
 ## Installation
 
 ### Clone repository
 
 ```bash
-git clone git@github.com:monobasic/Angular-6-Demo-Shop.git
+git clone https://github.com/satyajitghana/ProjektPlutus
 ```
 
 ### Install Angular-Cli globally
@@ -23,7 +19,7 @@ npm install -g @angular/cli
 ### Install NPM packages
 
 ```bash
-cd Angular-6-Demo-Shop
+cd ProjektPlutus
 npm install
 ```
 
@@ -154,27 +150,6 @@ So we decided to implement basic shop functionality for now and base the project
 - All displayed prices are handled via a PriceComponent to simplify currency display/formatting
 - Search with Typeahead functionality (Unfortunately, FireBase has very limited  functionality for full text search. For a real application, local search would be the better option)
 
-### Custom Express/MongoDB Backend
-
-Implementation started with a custom MEAN-architecture, which used a mLab-database.
-We switched to «serverless» with Firebase due to several reasons:
-
-- Backend not in the scope of this front-end-project and the CAS-FEE-task.
-- Firebase provides complete functionality set
-- Failure of knowledge-transfer between developers
-- mLab blocked in the HSR-network
-
-The unfinished project can be found under: [CAS-FEE-PROJEKT-2-CUSTOM-MEAN-BACKEND](https://github.com/chzellweger/CAS-FEE-PROJEKT-2-CUSTOM-MEAN-BACKEND)
-
-### Special Mentions
-
-- All product data changes are propagated in real time to all clients without reloading, via Firebase Real Time Data Base and reactive programming with RxJs (try rating a product or update a property in the CRUD-module)
-- Off Canvas Navigation is handled via Service, several CSS classes needs to be applied to different components
-
-## UX-Test
-
-UX-Tests are documented in [ux-testing/ux-test.md](./ux-testing/ux-test.md).
-
 ## Possible future features and updates
 
 - Speed up initial page load with server rendered start page and/or lazy load modules
@@ -198,39 +173,3 @@ UX-Tests are documented in [ux-testing/ux-test.md](./ux-testing/ux-test.md).
 - Implementing a state management (i. e. ngrx)
 - Social sharing functionality
 - Authenticate with Google, Facebook and other OAUTH services
-
-## Final verdict
-
-### General outcome
-
-Angular is great as a foundation for bigger web projects and multiple developers involved. The framework has a very defined structure and this helps, keeping things un-messy. However, third party components are rare right now, so even for basic UI stuff like carousels one need to spend a lot of time, to re-create well known jquery moduls functionalites in "the Angular way".
-
-### Theming/jQuery
-
-Theme / third party ui component integration – as common as it is in the daily web agency business – is a challenge. Many themes are based around a styling framework like Bootstrap, HTML/CSS and user interface logic code in jQuery. As it seems some of the well known UI components like Isotope grid, imagesLoaded, Carsoussels and so on are not ported to Angular5 yet.
-
-### Learning curve
-
-Angular & RxJS both have a steep learning curve.
-
-### SEO
-
-Without using Angular Universal and server side rendering, its not possible to provide meta page title and description. This makes SEO - still a big topic around SPAs – harder. For a shop application, indexing and deep linking to shop product details are most probably the most important thing. Also xml file generation for google merchant could be a issue.
-
-### UI performance
-
-UI performance and User experience is great for a shop on SPA basis. Instant feedback for user interactions, like rating of products via Firebase, is very cool too.
-
-### Firebase Backend
-
-Firebase provides a whole lot of functionalities which make things like user-management a lot easier. However the security rules configuration needs a lot of attention. In general there is a lot of potential for security holes.
-
-### Testing
-
-Karma tests run quite slow, this could be a issue if you have a lot of tests when the app is growing. Jest, the testing framework of Facebook/React would be a good alternative. We did some research and it was quite easy to integrate into an Angular application. Also worth mentioning: we found our way around, but if you need to mock AngularFire and/or Firebase API stuff, this could be major pain in the ass ;)
-
-## Extra extra
-
-If you want to see how this project came to life according to its git-repo, checkout this awesome and funny video made with [Gource](http://gource.io) ([how to here](https://github.com/acaudwell/Gource/wiki/Videos)):
-
-[<img width="906" alt="bildschirmfoto 2018-04-22 um 16 38 46" src="https://user-images.githubusercontent.com/16070364/39096101-ac275aec-464b-11e8-884d-c623920a43a6.png">](https://drive.google.com/file/d/1XE7w15OPPKVKA1PFKpfTc04G_kNFEABo/view?usp=sharing)
