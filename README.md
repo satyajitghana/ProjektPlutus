@@ -37,10 +37,6 @@ ng serve
 
 Runs a webpack-development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-### Checkout the shop
-
-Point your browser to localhost:4200. In any case the dev build is not working, there is an already built app available on http://shop.andre-abt.com for checking out. Deeplinking for the Angular router is handled via .htaccess config.
-
 ### Run unit tests
 
 ```bash
@@ -96,14 +92,6 @@ So we decided to implement basic shop functionality for now and base the project
 - Edit existing product
 - Delete existing product
 - Images handled with Firebase Storage
-
-#### Rating
-
-- Products can be rated by logged in users from 1 to 5
-- User can change his previous rating
-- Previous rating is reflected in the UI
-- Overall rating gets calculated and displayed instantly
-- Rating is updated in a reactive manner, even for cached products
 
 #### Cart
 
