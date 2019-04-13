@@ -34,7 +34,7 @@ export class AddressComponent implements OnInit, OnDestroy {
   }
 
   private initFormGroup() {
-    this.countries = ['Switzerland'];
+    this.countries = ['India'];
     this.formAddress = new FormGroup({
       firstname: new FormControl(
         this.user && this.user.firstName,
@@ -48,7 +48,7 @@ export class AddressComponent implements OnInit, OnDestroy {
       address2: new FormControl(null),
       zip: new FormControl(null, [
         Validators.required,
-        Validators.pattern(/^\d\d\d\d$/)
+        Validators.pattern(/^\d\d\d\d\d\d$/)
       ]),
       city: new FormControl(null, Validators.required),
       email: new FormControl(
@@ -70,16 +70,16 @@ export class AddressComponent implements OnInit, OnDestroy {
   public onFillForm(event: Event) {
     event.preventDefault();
     this.formAddress.setValue({
-      firstname: 'Hans',
-      lastname: 'Muster',
-      address1: 'Musterstrasse 13',
-      address2: '',
-      zip: 1234,
-      city: 'Musterhausen',
-      email: 'hans.muster@muster.com',
-      phone: '+41791234567',
+      firstname: 'Satyajit',
+      lastname: 'Ghana',
+      address1: '14th street, 6th cross',
+      address2: 'AECS Layout',
+      zip: 560094,
+      city: 'Bangalore',
+      email: 'shadowleaf.satyajit@gmail.com',
+      phone: '+917892137665',
       company: '',
-      country: 'Switzerland'
+      country: 'India'
     });
   }
 

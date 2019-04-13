@@ -2,7 +2,7 @@
   <a routerLink="/cart"></a>
   <i class="icon-bag"></i>
   <span class="count">{{items.length}}</span>
-  <span class="subtotal">{{ total | currency }}</span>
+  <span class="subtotal">{{ total | currency:'INR' }}</span>
   <div class="toolbar-dropdown">
     <div *ngIf="items.length; else noItemsInCart">
       <div *ngFor="let item of items" class="dropdown-product-item">
